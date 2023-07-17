@@ -1,0 +1,146 @@
+.contacts-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 200px;
+    gap: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border: solid lightgrey 2px;
+    box-shadow:  10px 5px 5px rgb(192, 192, 193);
+    background: linear-gradient(0.4turn, white, #75D1D1,  white, #75D1D1,white);
+}
+
+/*icone*/
+.fas{
+    color: #F7AFB0;
+    -webkit-text-stroke-width: 1px; /* Largeur du contour */
+    -webkit-text-stroke-color: rgb(255,255,255); /* Couleur du contour */
+    font-size: 3rem; 
+}
+
+.contact-infos{
+    padding-top: 5px;
+    color: black;
+    
+}
+
+.mail{
+    justify-content: center;
+    font-size: 24px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.telephone{
+    justify-content:center;
+    font-size: 24px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .contacts-box{
+        width: 80%;
+        height: 200px;
+        gap: 50px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .contacts-box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 150px;
+        gap: 20px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+    .contacts-box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 110px;
+        gap: 20px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .mail{
+        justify-content: center;
+        font-size: 15px;
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .telephone{
+        justify-content:center;
+        font-size: 15px;
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .fas{
+        color: #F7AFB0;
+        -webkit-text-stroke-width: 1px; /* Largeur du contour */
+        -webkit-text-stroke-color: rgb(255,255,255); /* Couleur du contour */
+        font-size: 2rem; 
+    }
+}
+
+@media (min-width: 280px) and (max-width: 374px) {
+    .contacts-box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 110px;
+        gap: 20px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+        border: none;
+        box-shadow: none;
+       
+    }
+
+    .mail{
+        justify-content: center;
+        font-size: 15px;
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .telephone{
+        justify-content:center;
+        font-size: 15px;
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    .fas{
+        color: #F7AFB0;
+        -webkit-text-stroke-width: 1px; /* Largeur du contour */
+        -webkit-text-stroke-color: rgb(255,255,255); /* Couleur du contour */
+        font-size: 2rem; 
+    }
+}
+
+
+
+  

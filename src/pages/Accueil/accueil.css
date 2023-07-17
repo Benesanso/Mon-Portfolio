@@ -1,0 +1,330 @@
+.acceuil-tittle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h1{
+    font-size: 60px;
+    padding-top: 100px;
+    text-align: center;
+    letter-spacing: 5px; /* Espacement entre les lettres */
+    color: black;
+       /* -webkit-text-stroke-width: 3px;  Largeur du contour */
+        /* -webkit-text-stroke-color: rgb(132, 203, 202); Couleur du contour */
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 60px;
+    gap: 20px;
+}
+
+h2{
+    font-size: 40px;
+    margin: 60px 0px 20px 0px;
+    padding-bottom:50px;
+    color: black;
+       
+}
+
+p{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.bloc-intro{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0.4turn, white, #75D1D1,  white);
+    border: solid lightgrey 2px;
+    box-shadow:  10px 5px 5px rgb(192, 192, 193);
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border-radius: 20px;  
+}
+/*ul*/
+.intro{  
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-bottom: 60px;
+    list-style-type: none; /* Supprime les puces standard */
+}
+
+/*li*/
+.intro .content{
+    font-size: 18px;
+    position: relative;
+    padding: 0px;
+    padding-left: 20px; /* Ajoute un espace à gauche pour l'icône */
+    margin-bottom: 30px; /* Espacement entre les éléments de la liste */ 
+}
+
+/*li*/
+.intro .content::before {
+    padding: 0px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 20px; /* Largeur de l'icône */
+    height: 20px; /* Hauteur de l'icône */
+    background: url(../../assets/lune.jpg) center center no-repeat;
+    background-size: cover; /* Ajuste la taille de l'icône */
+    border-radius: 50%; /* Rend l'icône ronde */
+    border: 1px solid #555252; /* Couleur et épaisseur de la bordure */
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.link a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.link:hover{
+    color: #1caeae;   
+}
+
+.link:hover a {
+    color: #1caeae;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    h1{
+        font-size: 40px;
+        padding-top: 30px;
+    }
+
+    h2{
+        font-size: 26px;
+        margin: 30px 0px 0px 0px;
+        padding-bottom:0px;
+        color: black;      
+    }
+
+    .bloc-intro{
+        width: 95%;
+        margin-top: 40px;
+    }
+    /*ul*/
+    .intro{  
+        margin-left: 220px;
+        margin-bottom: 30px;
+    }
+   
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    h1{
+        font-size: 28px;
+        padding-top: 30px;
+    }
+
+    .bloc-intro{
+        width: 95%;
+        margin-top: 40px;
+    }
+
+    .presentation{
+        margin-left: 35px;
+        margin-bottom: 40px;  
+    }
+
+    h2{
+        font-size: 24px;
+        margin: 30px 0px 0px 0px;
+        padding-bottom:0px;
+        color: black;      
+    }
+    
+    p{
+       font-size: 16px;
+       padding: 0px;
+    }
+
+    /*ul*/
+    .intro{  
+        width: 85%;
+        margin-left: 120px;
+        margin-bottom: 30px;
+    }
+
+    /*li*/
+    .intro .content{
+        font-size: 15px;
+        margin-bottom: 20px; /* Espacement entre les éléments de la liste */ 
+    }
+
+    /*li*/
+    .intro .content::before {
+        width: 20px; /* Largeur de l'icône */
+        height: 20px; /* Hauteur de l'icône */
+    }
+
+    .link a {
+        display: flex;
+        font-size: 14px;
+    }
+
+    .fa{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    h1{
+        font-size: 22px;
+        padding-top: 30px;
+    }
+
+    .bloc-intro{
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .presentation{
+        margin-left: 10px;
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    h2{
+        font-size: 20px;
+        margin: 30px 0px 0px 0px;
+        padding-bottom:0px;
+        color: black;      
+    }
+    
+    p{
+       font-size: 15px;
+    }
+
+    /*ul*/
+    .intro{  
+        width: 90%;
+        display: flex;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    /*li*/
+    .intro .content{
+        font-size: 15px;
+        margin-bottom: 20px; /* Espacement entre les éléments de la liste */ 
+    }
+
+    /*li*/
+    .intro .content::before {
+        width: 10px; /* Largeur de l'icône */
+        height: 10px; /* Hauteur de l'icône */
+    }
+
+    .link a {
+        display: flex;
+        font-size: 10px;
+    }
+
+    .fa{
+        font-size: 15px;
+    }
+
+    .link {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 374px) {
+    h1{
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    .bloc-intro{
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .presentation{
+        margin-left: 10px;
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    h2{
+        font-size: 20px;
+        margin: 30px 0px 0px 0px;
+        padding-bottom:0px;
+        color: black;      
+    }
+    
+    p{
+       font-size: 15px;
+    }
+
+    /*ul*/
+    .intro{  
+        width: 90%;
+        display: flex;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    /*li*/
+    .intro .content{
+        font-size: 15px;
+        margin-bottom: 20px; /* Espacement entre les éléments de la liste */ 
+    }
+
+    /*li*/
+    .intro .content::before {
+        width: 10px; /* Largeur de l'icône */
+        height: 10px; /* Hauteur de l'icône */
+    }
+
+    .link a {
+        display: flex;
+        font-size: 10px;
+    }
+
+    .fa{
+        font-size: 15px;
+    }
+
+    .link {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+}

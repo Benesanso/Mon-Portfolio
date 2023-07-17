@@ -1,0 +1,234 @@
+.competences-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.EcoleImage {
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+}
+
+.bloc-title{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 20px;
+    background: linear-gradient(0.4turn, white, #75D1D1,  white);
+    border: solid lightgrey 2px;
+    box-shadow:  10px 5px 5px rgb(192, 192, 193);
+    margin-bottom: 50px;
+}
+
+.techno{
+    text-align: center;
+}
+
+.buzzer{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.fa-solid{
+    font-size: 35px;
+    color:  rgb(187, 192, 193);
+}
+
+.btn-confettis{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: #FACECD;
+   border: 1px solid black; 
+   box-shadow: 0 5px rgb(149, 187, 195) ;
+}
+
+.btn-confettis:active{
+    margin-top: 7px;
+    box-shadow: 0 0px rgb(61, 198, 198) ;
+}
+
+.chevron-icon {
+    display: flex;
+    height: 20%x;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.image {
+    width: 80px;
+    height: 80px;
+    user-select: none;
+    margin: 5px;
+}
+
+.slot {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.image-name {
+    display: none;
+}
+
+.visible .image-name {
+    display: block;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .bloc-title{
+        width: 95%;
+    }
+
+    .buzzer{
+        margin: 15px 0px 0px 0px;
+    }
+
+    .slot {
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+        gap: 20px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .bloc-title{
+        width: 95%;
+    }
+
+    .buzzer{
+        margin: 15px 0px 0px 0px;
+    }
+
+    .slot {
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .competences-page{
+        height: 10%;
+        margin-top: 50px;
+    }
+  
+    .bloc-title{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0px;
+        background: linear-gradient(0.4turn, white, #75D1D1,  white);
+        border: none;
+        box-shadow:  none;
+        margin-bottom: 20px;
+    }
+  
+    .formation{
+        text-align: center;
+    }
+
+    .techno{
+        text-align: center;
+        margin: 20px;
+    }
+
+    .chevron-icon {
+        gap: 15px;
+        margin-bottom: 0px;
+    }
+
+    .slot {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        gap: 20px;
+    }
+
+    .buzzer{
+        margin: 5px 0px 0px 0px;
+        font-size: 12px;
+    }
+
+    .image {
+        width: 40px;
+        height: 40px;
+        user-select: none;
+        margin: 5px;
+    }
+    .image-name {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 374px) {
+    .competences-page{
+      height: 10%;
+      margin-top: 40px;
+    }
+
+    .bloc-title{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0px;
+        background: linear-gradient(0.4turn, white, #75D1D1,  white);
+        border: none;
+        box-shadow:  none;
+        margin-bottom: 20px;
+    }
+
+    .formation{
+        text-align: center;
+    }
+
+    .techno{
+        text-align: center;
+        margin: 20px;
+    }
+
+    .chevron-icon {
+        gap: 15px;
+        margin-bottom: 0px;
+    }
+
+    .slot {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        gap: 15px;
+    }
+
+    .buzzer{
+        margin: 5px 0px 0px 0px;
+        font-size: 12px;
+    }
+
+    .image {
+        width: 40px;
+        height: 40px;
+        user-select: none;
+        margin: 5px;
+    }
+    .image-name {
+        font-size: 12px;
+    }
+}
+

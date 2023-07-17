@@ -1,0 +1,220 @@
+.contenu {
+    margin-bottom: 50px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center; /* Centre verticalement */
+    gap: 80px;
+    border: solid lightgrey 2px;
+    box-shadow:  10px 5px 5px rgb(192, 192, 193);
+    background: linear-gradient(0.4turn, white, #75D1D1,  white);
+    border-radius: 20px;
+}
+
+/*h2 mes formations*/
+.formation{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    cursor: pointer;
+    padding-top:10px ;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.list-collapses {
+    list-style: none;
+    width: 80%;
+    align-items: center;
+}
+
+.collapsesContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    margin: 20px;
+}
+
+.blocCollapse{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    border: 1px solid #8BCACA;
+    box-shadow: 0 5px rgb(149, 187, 195);
+    border-radius: 15px;
+    background: linear-gradient(0.4turn,#DCDCDC,  white,  #DCDCDC);
+}
+
+.blocCollapse:active{
+    margin-top: 7px;
+    box-shadow: 0 0px rgb(61, 198, 198) ;
+}
+
+.bloc1{
+   margin-left: 200px;
+}
+
+.bloc2{
+    margin-left: 70px;
+}
+
+.titre h3{
+    text-align: center;
+}
+
+.titre li{
+    padding-bottom: 20px;
+    padding-left: 0px;
+    font-size:18px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .contenu {
+        width: 95%;  
+    }
+
+    .blocCollapse{
+        width: 95%;
+    }
+
+    .collapsesContent{
+        gap: 40px;
+    }
+    
+    h3 {
+        padding-top:20px ;
+        font-size: 20px;
+    } 
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .contenu {
+        width: 95%;  
+    }
+
+    .blocCollapse{
+        width: 95%;
+    }
+
+    .collapsesContent{
+        gap: 40px;
+    }
+
+    h3 {
+        padding-top:20px ;
+        font-size: 20px;
+    } 
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    .contenu {
+        width: 100%;
+        margin-bottom: 50px;
+        border: none;
+        box-shadow: none;
+        background: linear-gradient(0.4turn, white, #75D1D1,  white);
+        border-radius: 0px;
+    }
+
+    h3 {
+        padding-top:20px ;
+        font-size: 14px;
+        border-radius: 10px;
+        justify-content: space-between;
+    }
+
+    .blocCollapse{
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        height:auto;
+        border: 1px solid #8BCACA;
+        box-shadow: 0 5px rgb(149, 187, 195);
+        border-radius: 15px;
+        background: linear-gradient(0.4turn,#DCDCDC,  white,  #DCDCDC);
+    }
+
+    .list-collapses {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width: 95%;
+        height: auto;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .bloc1{
+        margin: 0px 0px 10px 50px;
+    }
+
+    .bloc2{
+        margin: 0px 0px 10px 50px;
+    }
+
+    .titre li{
+        padding-bottom: 0px;
+        padding-left: 0px;
+        font-size:14px;
+    }
+
+}
+
+@media (min-width: 280px) and (max-width: 374px) {
+    .contenu {
+        width: 100%;
+        margin-bottom: 50px;
+        border: none;
+        box-shadow: none;
+        background: linear-gradient(0.4turn, white, #75D1D1,  white);
+        border-radius: 0px;
+    }
+
+    h3 {
+        padding-top:20px ;
+        font-size: 14px;
+        border-radius: 10px;
+        justify-content: space-between;
+    }
+
+    .blocCollapse{
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        height:auto;
+        border: 1px solid #8BCACA;
+        box-shadow: 0 5px rgb(149, 187, 195);
+        border-radius: 15px;
+        background: linear-gradient(0.4turn,#DCDCDC,  white,  #DCDCDC);
+    }
+
+    .list-collapses {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width: 95%;
+        height: auto;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .bloc1{
+        margin: 0px 0px 10px 50px;
+    }
+
+    .bloc2{
+        margin: 0px 0px 10px 50px;
+    }
+
+    .titre li{
+        padding-bottom: 0px;
+        padding-left: 0px;
+        font-size:14px;
+    }
+}
