@@ -20,51 +20,44 @@ import Wakelet from '../../assets/Wakelet.jpg';
 import GitHub from '../../assets/GitHub.jpg'; 
 
 function Competences() {
-  const slotRefTechnologies = useRef(null); // Référence à la zone contenant les images des technologies
-  const slotRefOutils = useRef(null); // Référence à la zone contenant les images des outils
-  const [isVisible, setIsVisibleTechnologies] = useState(false); // État pour contrôler la visibilité des images des technologies
-  const [isTheVisible, setIsVisibleOutils] = useState(false); // État pour contrôler la visibilité des images des outils
+  const slotRefTechnologies = useRef(null);
+  const slotRefOutils = useRef(null);
+  const [isVisibleTechnologies, setIsVisibleTechnologies] = useState(true); // Définir l'état initial à true
+  const [isVisibleOutils, setIsVisibleOutils] = useState(true); // Définir l'état initial à true
 
   useEffect(() => {
-    gsap.set('.image', { opacity: 0, y: 50 }); // Initialise l'opacité et la position des images à cacher avec GSAP
+    gsap.set('.image', { opacity: 1, y: 0 }); // Définir l'opacité et la position initiales pour afficher les images
   }, []);
 
   const handleTechnologiesClick = () => {
-    const imagesTechnologies = slotRefTechnologies.current.querySelectorAll('.image'); // Sélectionne toutes les images des technologies
+    const imagesTechnologies = slotRefTechnologies.current.querySelectorAll('.image');
+    const newVisibility = !isVisibleTechnologies; // Inverser l'état de visibilité
 
-    gsap.fromTo(
-      imagesTechnologies,
-      { opacity: 0, y: 50 }, // Début de l'animation avec une opacité de 0 et une position y de 50
-      {
-        duration: 1, // Durée de l'animation : 1 seconde
-        opacity: 1, // Opacité finale : 1 (visible)
-        y: 0, // Position y finale : 0 (position normale)
-        stagger: 0.1, // Décalage entre chaque image
-        ease: 'power4.out', // Type d'animation
-      }
-    );
+    gsap.to(imagesTechnologies, {
+      duration: 1,
+      opacity: newVisibility ? 1 : 0, // Définir l'opacité en fonction du nouvel état de visibilité
+      y: newVisibility ? 0 : 50, // Définir la position en fonction du nouvel état de visibilité
+      stagger: 0.1,
+      ease: 'power4.out',
+    });
 
-    setIsVisibleTechnologies(true); // Définit l'état pour afficher les images des technologies
+    setIsVisibleTechnologies(newVisibility); // Mettre à jour l'état de visibilité pour les images des technologies
   };
 
   const handleOutilsClick = () => {
-    const imagesOutils = slotRefOutils.current.querySelectorAll('.image'); // Sélectionne toutes les images des outils
+    const imagesOutils = slotRefOutils.current.querySelectorAll('.image');
+    const newVisibility = !isVisibleOutils; // Inverser l'état de visibilité
 
-    gsap.fromTo(
-      imagesOutils,
-      { opacity: 0, y: 50 }, // Début de l'animation avec une opacité de 0 et une position y de 50
-      {
-        duration: 1, // Durée de l'animation : 1 seconde
-        opacity: 1, // Opacité finale : 1 (visible)
-        y: 0, // Position y finale : 0 (position normale)
-        stagger: 0.1, // Décalage entre chaque image
-        ease: 'power4.out', // Type d'animation
-      }
-    );
+    gsap.to(imagesOutils, {
+      duration: 1,
+      opacity: newVisibility ? 1 : 0, // Définir l'opacité en fonction du nouvel état de visibilité
+      y: newVisibility ? 0 : 50, // Définir la position en fonction du nouvel état de visibilité
+      stagger: 0.1,
+      ease: 'power4.out',
+    });
 
-    setIsVisibleOutils(true); // Définit l'état pour afficher les images des outils
+    setIsVisibleOutils(newVisibility); // Mettre à jour l'état de visibilité pour les images des outils
   };
-
   return (
     <div className="competences-page">
      
@@ -84,35 +77,35 @@ function Competences() {
       <div className="chevron-icon">
         <div className="slot" ref={slotRefTechnologies}>
           {/* Image et nom de chaque technologie */}
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={HTML5} alt="HTML5" className="image" />
             <div className="image-name">HTML5</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={CSS3} alt="CSS3" className="image" />
             <div className="image-name">CSS3</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={JavaScript} alt="JavaScript" className="image" />
             <div className="image-name">JavaScript</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={ReactJs} alt="React" className="image" />
             <div className="image-name">React</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={NodeJs} alt="NodeJS" className="image" />
             <div className="image-name">NodeJS</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={MongoDB} alt="MongoDB" className="image" />
             <div className="image-name">MongoDB</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={NPM} alt="NPM" className="image" />
             <div className="image-name">NPM</div>
           </div>
-          <div className={`image-container ${isVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleTechnologies ? "visible" : ""}`}>
             <img src={Express} alt="Express" className="image" />
             <div className="image-name">ExpressJs</div>
           </div>
@@ -133,27 +126,27 @@ function Competences() {
       <div className="chevron-icon">
         <div className="slot" ref={slotRefOutils}>
           {/* Image et nom de chaque outil */}
-          <div className={`image-container ${isTheVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleOutils ? "visible" : ""}`}>
             <img src={VsCode} alt="VsCode" className="image" />
             <div className="image-name">VsCode</div>
           </div>
-          <div className={`image-container ${isTheVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleOutils ? "visible" : ""}`}>
             <img src={GitHub} alt="GitHub" className="image" />
             <div className="image-name">GitHub</div>
           </div>
-          <div className={`image-container ${isTheVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleOutils ? "visible" : ""}`}>
             <img src={Git} alt="Git" className="image" />
             <div className="image-name">Git</div>
           </div>
-          <div className={`image-container ${isTheVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleOutils ? "visible" : ""}`}>
             <img src={Trello} alt="Trello" className="image" />
             <div className="image-name">Trello</div>
           </div>
-          <div className={`image-container ${isTheVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleOutils ? "visible" : ""}`}>
             <img src={Figma} alt="Figma" className="image" />
             <div className="image-name">Figma</div>
           </div>
-          <div className={`image-container ${isTheVisible ? "visible" : ""}`}>
+          <div className={`image-container ${isVisibleOutils ? "visible" : ""}`}>
             <img src={Wakelet} alt="Wakelet" className="image" />
             <div className="image-name">Wakelet</div>
           </div>
