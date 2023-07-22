@@ -208,7 +208,7 @@ const handleOpenLink = (url) => {
             <div className="modal-content">
               <h2 className='modal-title'>Projet KASA</h2>
               <button className="card-photos">
-              <img className="modal-photos"  src={Kasa} alt="Site de location appartement entre particulier" onClick={() => handleOpenLink("https://github.com/Benesanso/Kasa.git")} />
+              <img className="modal-photos"  src={Kasa} alt="Site de location appartement entre particulier" onClick={() => handleOpenLink("https://dreamy-lollipop-4e75f5.netlify.app")} />
               </button>
               <Link className=" lienGithub" to="https://github.com/Benesanso/Kasa.git">Lien vers Github</Link>
               <h3>Description du projet</h3>
