@@ -1,39 +1,64 @@
 import React, { useState } from 'react';
 import './contacts.css';
+import Modal from '../../components/Modale/modale';
 
 const Contacts = () => {
-  const [isEmailOpen, setEmailOpen] = useState(false); // État pour contrôler l'ouverture/fermeture de l'e-mail
-  const [isPhoneOpen, setPhoneOpen] = useState(false); // État pour contrôler l'ouverture/fermeture du téléphone
+  const [isEmailOpen, setIsEmailOpen] = useState(false);
+  const [isPhoneOpen, setPhoneOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleEmailToggle = () => {
-    setEmailOpen(!isEmailOpen); // Inverse l'état de l'e-mail
+    setIsEmailOpen(!isEmailOpen);
   };
 
   const handlePhoneToggle = () => {
-    setPhoneOpen(!isPhoneOpen); // Inverse l'état du téléphone
+    setPhoneOpen(!isPhoneOpen);
+  };
+
+  const handleEmailHover = () => {
+    // Mettez à jour le style lorsque le curseur passe sur l'e-mail
+    // Vous pouvez utiliser une classe pour cela ou utiliser directement des styles en ligne
+  };
+
+  const handleModalOpen = () => {
+    console.log('Opening modal');
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    console.log('Closing modal');
+    setIsEmailOpen(false);
+    setModalOpen(false);
   };
 
   return (
     <div className="contacts-box">
       {/* Section pour l'e-mail */}
-      <div className='mail'>
+      <div
+        className='mail'
+        onMouseOver={handleEmailHover}
+        onClick={handleEmailToggle}
+      >
         <i
           className={`fas ${isEmailOpen ? 'fa-envelope-open' : 'fa-envelope'} icon`}
-          onClick={handleEmailToggle}
         ></i>
-        {/* Affiche l'e-mail si l'état isEmailOpen est vrai */}
-        {isEmailOpen && <span className="contact-infos">benesanso34@gmail.com</span>}
+        {isEmailOpen && (
+          <span className="contact-infos" onClick={handleModalOpen}>
+            benesanso34@gmail.com
+          </span>
+        )}
       </div>
-      
+
       {/* Section pour le téléphone */}
       <div className='telephone'>
         <i
           className={`fas ${isPhoneOpen ? 'fa-phone-volume' : 'fa-phone'} icon`}
           onClick={handlePhoneToggle}
         ></i>
-        {/* Affiche le numéro de téléphone si l'état isPhoneOpen est vrai */}
         {isPhoneOpen && <span className="contact-infos">06.16.16.98.08</span>}
       </div>
+
+      <Modal isOpen={modalOpen} handleClose={handleModalClose} />
     </div>
   );
 };

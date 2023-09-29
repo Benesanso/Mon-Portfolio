@@ -1,0 +1,85 @@
+/* modale.css */
+
+.modal-contact {
+    display: block !important;
+    display: none; /* La modal est initialement cachée */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour l'effet de superposition */
+}
+
+.modal-content-contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(0.4turn, white, #75D1D1,  white); /* Couleur de fond de la modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    height: 60%;
+}
+
+.close-contact {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+label {
+    display: flex;
+    gap: 20px;
+}
+
+.form-contact{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input[type="text"] {
+    border: none;
+    width: 50%;
+    background: linear-gradient(0.9turn, #F7AFB0, white, #F7AFB0,  white, #F7AFB0);
+    font-size: 18px;
+}
+
+input[type="email"] {
+    border: none;
+    width: 50%;
+    font-size: 18px;
+    background: linear-gradient(0.9turn, #F7AFB0, white, #F7AFB0,  white, #F7AFB0);
+}
+
+label.message textarea {
+    border: none;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(0.9turn, #F7AFB0, white, #F7AFB0,  white, #F7AFB0);
+    font-size: 18px;
+}
+
+.small-text{
+    font-size: 10px;
+}
+
+button.envoyer-button {
+    background: linear-gradient(0.9turn, #F7AFB0, white, #F7AFB0,  white, #F7AFB0);
+    border: none;
+    padding: 10px 20px; /* Exemple de rembourrage */
+    width: 30%;
+    margin-left: 35%;
+    cursor: pointer; /* Ajoute un effet de curseur pointer pour indiquer que le bouton est cliquable */
+}
+
+
+
+
+
