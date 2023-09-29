@@ -8,7 +8,7 @@ const TelechargerCV = () => {
     const urlDuCV = CurriculumVitaeImage;
     const lienDeTelechargement = document.createElement('a');
     lienDeTelechargement.href = urlDuCV;
-    lienDeTelechargement.download = 'Mon_CV.pdf';
+    lienDeTelechargement.download = 'Mon_CV_Sansonnette_Bénédicte.pdf';
     document.body.appendChild(lienDeTelechargement);
     lienDeTelechargement.click();
     document.body.removeChild(lienDeTelechargement);

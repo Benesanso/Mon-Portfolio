@@ -18,12 +18,17 @@
     -webkit-text-stroke-width: 1px; /* Largeur du contour */
     -webkit-text-stroke-color: rgb(255,255,255); /* Couleur du contour */
     font-size: 3rem; 
+    cursor: pointer;
 }
 
 .contact-infos{
     padding-top: 5px;
     color: black;
-    
+}
+
+.contact-infos-tel{
+    padding-top: 5px;
+    color: black;
 }
 
 .mail{
@@ -34,12 +39,15 @@
     cursor: pointer;
 }
 
+.contact-infos:hover {
+color: #e48080;
+}
+
 .telephone{
     justify-content:center;
     font-size: 24px;
     display: flex;
     gap: 20px;
-    cursor: pointer;
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
